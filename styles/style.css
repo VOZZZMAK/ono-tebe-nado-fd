@@ -1,1 +1,81 @@
-/* место для вашего кода */
+.content {
+
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 92px 50px 96px;
+}
+
+.header__menu {
+
+}
+
+.header__links-list {
+  display: flex;
+  gap: 32px;
+  list-style: circle;
+}
+
+.header__links-list-item_no-bullit {
+  list-style: none;
+}
+
+.header__link {
+  font-size: 18px;
+}
+
+/* если ссылка .header__link находится внутри активного пункта 
+.header__links-list-item_active, применить к ней стиль. */
+
+.header__links-list-item_active .header__link {
+  text-decoration: none;
+}
+
+.header__logo {
+  display: block; /* чтобы ссылка стала блоком*/
+  width: 148px;
+}
+
+.header__logo-image {
+  display: block; /* чтобы не было зазоров */
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 240px;
+  font-size: 18px;
+  line-height: 135%;
+}
+
+.header__address {
+  justify-self: end;
+}
+
+.cover {
+  padding: 165px 50px 50px;
+  background: url(../images/cover.jpg) no-repeat center;
+}
+
+.description {
+  
+}
+
+.lots {
+  margin-top: 180px;
+  padding: 0 24px;
+}
+
+.about {
+  margin-top: 120px;
+  padding: 35px 24px 0;
+}
+
+.footer {
+  margin-top: 180px;
+  padding: 0 50px 82px;
+}
