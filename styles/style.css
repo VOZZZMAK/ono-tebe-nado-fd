@@ -1,5 +1,4 @@
 .content {
-
 }
 
 .header {
@@ -10,7 +9,6 @@
 }
 
 .header__menu {
-
 }
 
 .header__links-list {
@@ -238,6 +236,9 @@
   grid-template-columns: 334px 1fr;
   margin-top: 120px;
   padding: 35px 24px 0;
+}
+
+.about__column {
 }
 
 .about__logo {
