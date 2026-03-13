@@ -25,6 +25,8 @@
 
 .header__link {
   font-size: 18px;
+  font-weight: 400;
+  color: #000;
 }
 
 /* если ссылка .header__link находится внутри активного пункта 
@@ -49,7 +51,9 @@
   align-items: flex-start;
   max-width: 240px;
   font-size: 18px;
+  font-weight: 400;
   line-height: 135%;
+  color: #000;
 }
 
 .header__address {
@@ -57,12 +61,91 @@
 }
 
 .cover {
+  position: relative;
+  min-height: 757px;
   padding: 165px 50px 50px;
-  background: url(../images/cover.jpg) no-repeat center;
+  background: url(../images/cover.jpg) center / cover no-repeat;
 }
 
-.description {
-  
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 0.6);
+}
+
+.cover__title {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115%;
+  text-transform: uppercase;
+}
+
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_left {
+  text-align: left;
+}
+
+.aligned-text_center {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.aligned-text_right {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* добавили отступ от первой строки, который отдалил вторую строку. */
+/* UPD: оказалось что letter-spacing-extended нужно только для определения межбуквенного расстояния. Размышление выше бесполезно */
+/* Для ревью, зачем задавать межбуквенное расстояние отдельным селектором? */
+
+
+.letter-spacing-extended {
+  letter-spacing: 30px;
+}
+
+/* убрали заданный отступ, чтобы третья строка зашла под вторую */
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+
+.cover__description {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 106px;
+}
+
+.cover__description-text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 127%;
+  text-transform: uppercase;
+  word-spacing: 18px;
+  color: #fff;
+}
+
+.bet-button {
+  border: 1px solid #fff;
+  min-width: 256px;
+  min-height: 51px;
+  padding: 12px 32px;
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
 }
 
 .lots {
@@ -70,12 +153,170 @@
   padding: 0 24px;
 }
 
+.lots__heading {
+  margin-bottom: 27px;
+  margin-left: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;;
+}
+
+.card {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 48px 40px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.card_type_film{
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book{
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.card__title {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.card__text {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.lots__look-more-link {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+}
+
 .about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
   margin-top: 120px;
   padding: 35px 24px 0;
 }
 
+.about__column {
+
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.about__logo-image {
+  width: 148px;
+}
+
+.about__title {
+  margin: 100px 0;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000;
+}
+
 .footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   margin-top: 180px;
   padding: 0 50px 82px;
+}
+
+.footer .address {
+  justify-self: start;
+  max-width: 264px;
+}
+
+.footer__menu {
+  justify-self: center;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+}
+
+.footer__menu-list {
+  list-style: none;
+  text-wrap: nowrap;
+}
+
+.footer__menu-link {
+  text-underline-offset: 4px;
+}
+
+.footer__menu-link_active .footer__menu-link{
+  text-decoration: none;
+}
+.footer__social-list {
+  display: flex;
+  justify-self: end;
+  gap: 48px;
+  list-style: none;
+}
+
+.footer__social-icon {
+  width: 48px;
 }
