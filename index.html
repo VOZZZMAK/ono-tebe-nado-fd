@@ -37,7 +37,7 @@
       <address class="address header__address">
         <a href="tel:+99995555555">+9 999 555 5555</a>
         <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        <p>наб. Принсенграхт 263-265, Амстердам</p>
+        <p>наб. Принсенграхт 263- 265, Амстердам</p>
       </address>
     </header>
     <main class="content">
@@ -45,13 +45,13 @@
         <div class="overlay"></div>
         <h1 class="cover__title">
           <span class="aligned-text aligned-text_left letter-spacing-extended"
-            >ОН<span class="no-letter-spacing">О</span></span
+            >он<span class="no-letter-spacing">о</span></span
           >
           <span class="aligned-text aligned-text_center letter-spacing-extended"
-            >ТЕБ<span class="no-letter-spacing">Е</span></span
+            >теб<span class="no-letter-spacing">е</span></span
           >
           <span class="aligned-text aligned-text_right letter-spacing-extended"
-            >НАД<span class="no-letter-spacing">О</span></span
+            >над<span class="no-letter-spacing">о</span></span
           >
           <!-- Тут были сложные махинации со span-ами. letter-spacing на отделбную букву работает и на следующую строку. Больше в селекторах -->
         </h1>
@@ -63,7 +63,7 @@
         </div>
       </section>
       <section class="lots">
-        <h2 class="lots__heading">Лоты</h2>
+        <h2 class="lots__heading">лоты</h2>
         <ul class="lots__card-list">
           <li class="lots__card-list-item">
             <a class="card-link" href="#">
@@ -127,7 +127,10 @@
             />
           </div>
         </div>
-        <div class="about__column about__column-text">
+
+        <!-- После код-ревью поменял атрибут div на article для улучшения семантики -->
+
+        <article class="about__column about__column-text">
           <h2 class="about__title">Об аукционе</h2>
           <div class="about__text">
             <p>
@@ -147,7 +150,7 @@
               лоты стали культовыми.
             </p>
           </div>
-        </div>
+        </article>
       </section>
     </main>
     <footer class="footer">
